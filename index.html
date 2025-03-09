@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Paulo - Desenvolvedor Full Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-items {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 10%;
+                left: 0;
+                width: 100%;
+                background-color: #2d7a7a;
+                /* Cor de fundo do menu */
+                padding: 1rem;
+            }
+
+            .menu-items.open {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <header class="bg-gradient-to-r from-teal-600 to-teal-800 text-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="assets/images/foto.png" class="w-16 h-16 rounded-full border-2 border-teal-300"
+                    alt="Foto de Marcos Paulo">
+                <div>
+                    <h1 class="text-2xl font-bold">Marcos Paulo</h1>
+                    <p class="text-sm font-light text-teal-200">Desenvolvedor Full Stack</p>
+                </div>
+            </div>
+
+            <!-- Botão de menu para mobile -->
+            <button class="menu-toggle text-teal-200 hover:text-teal-300 focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+
+            <!-- Menu de navegação -->
+            <ul class="menu-items  space-x-8 text-lg font-medium">
+                <li><a href="#sobre" class="hover:text-teal-300 transition duration-300">Sobre</a></li>
+                <li><a href="#servicos" class="hover:text-teal-300 transition duration-300">Serviços</a></li>
+                <li><a href="#projetos" class="hover:text-teal-300 transition duration-300">Projetos</a></li>
+                <li><a href="#contato" class="hover:text-teal-300 transition duration-300">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="bg-gradient-to-r from-teal-600 to-teal-800 text-white h-screen flex justify-center items-center text-center px-6 py-12">
+        <div class="max-w-3xl space-y-8">
+            <h2 class="text-5xl font-bold leading-tight sm:text-6xl">Transformando ideias em soluções digitais
+                eficientes</h2>
+            <p class="text-lg sm:text-xl max-w-xl mx-auto text-teal-100">Com mais de 5 anos de experiência em
+                desenvolvimento Full Stack e automação, crio sistemas que otimizam processos e impulsionam negócios.</p>
+            <a href="#contato"
+                class="inline-block bg-teal-500 text-white py-3 px-8 rounded-lg text-xl font-semibold mt-6 hover:bg-teal-600 transition duration-300 transform hover:scale-105">Vamos
+                conversar</a>
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="https://www.linkedin.com/in/marcos-paulo-machado/" target="_blank"
+                    class="text-white hover:text-teal-300 transition duration-300">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/marcos010894?tab=repositories" target="_blank"
+                    class="text-white hover:text-teal-300 transition duration-300">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="Currículo Simples Profissional Formação experiência cursos e habilidades.pdf" download
+                    class="text-white hover:text-teal-300 transition duration-300">
+                    <i class="fas fa-download fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <h2 class="text-4xl font-bold text-teal-900">Quem Sou Eu</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Sou um desenvolvedor Full Stack com mais de 5 anos de
+                experiência, especializado em automação de processos e desenvolvimento de sistemas web e móveis. Minha
+                paixão é criar soluções que simplificam a vida das pessoas e impulsionam negócios.</p>
+
+            <!-- Cards com informações -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-user-tie fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Minha Jornada</h3>
+                    <p class="text-lg text-gray-600">Formado em Análise e Desenvolvimento de Sistemas, atuei em empresas
+                        como Sal Express e Globality, desenvolvendo sistemas complexos e automações que otimizaram
+                        processos.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-laptop-code fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Tecnologias</h3>
+                    <p class="text-lg text-gray-600">Trabalho com React, Flutter, Python (FastAPI, Selenium), Node.js,
+                        PHP, MySQL, AWS, Docker e muito mais. Sempre buscando as melhores ferramentas para cada desafio.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-lightbulb fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Filosofia</h3>
+                    <p class="text-lg text-gray-600">Acredito que a tecnologia deve ser acessível e intuitiva. Meu
+                        objetivo é criar soluções que resolvem problemas reais e trazem resultados concretos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-gradient-to-b from-teal-50 to-teal-100 text-center">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <h2 class="text-4xl font-bold text-teal-900">O Que Eu Faço</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Ofereço serviços personalizados para atender às
+                necessidades do seu negócio.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-code fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Desenvolvimento Web</h3>
+                    <p class="text-lg text-gray-600">Criação de sites e aplicações web modernas, responsivas e de alto
+                        desempenho.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Aplicativos Móveis</h3>
+                    <p class="text-lg text-gray-600">Desenvolvimento de apps para iOS e Android, com foco na experiência
+                        do usuário.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <div class="text-teal-600 mb-4">
+                        <i class="fas fa-cogs fa-3x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">Automação</h3>
+                    <p class="text-lg text-gray-600">Automatização de processos para aumentar a eficiência do seu
+                        negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <h2 class="text-4xl font-bold text-teal-900">Projetos Recentes</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Alguns dos projetos que desenvolvi para clientes e para o
+                meu portfólio.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Projeto 1 -->
+
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/4.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Salexpress</h3>
+                    <p class="text-lg text-gray-600 mb-4">Na sal sou responsavel por planejas diversos app e automações,
+                        aqui te mostro alguns permitidos.
+                        <br>
+                        <strong>Tecnologias:</strong> Python, JavaScript, php, html, css, AWS (EC2, S3), docker
+                    </p>
+                    <button onclick="openModal('modal4')"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/Imagem do WhatsApp de 2025-03-06 à(s) 12.01.17_043e2ebe.jpg" alt="Projeto 3"
+                        class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">App de Etiquetas</h3>
+                    <p class="text-lg text-gray-600 mb-4">Aplicativo para impressão de etiquetas via Bluetooth. Que
+                        reduziu consideravelmente o nivel de extravios, gerando mais lucro para a empresa
+                        <br>
+                        <strong>Tecnologias:</strong> Flutter, Python
+                    </p>
+                    <button onclick="openModal('modal3')"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/angel.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Sistema para corretor</h3>
+                    <p class="text-lg text-gray-600 mb-4">Site que permite o corretor a divulgar suas casas, dando a ele
+                        autonomia em adicionar suas fotos, descrições e compartilhar suas casas de forma moderna
+                        <br>
+                        <strong>Tecnologias:</strong> php, JavaScript, html, css, mysql
+                    </p>
+                    <button onclick="window.open('https://angelmarcos.com.br/', '_blank');"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+
+
+                <!-- Projeto 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/Captura de tela 2025-03-08 151124.png" alt="Projeto 2"
+                        class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Globaltty</h3>
+                    <p class="text-lg text-gray-600 mb-4">Desenvolvimento do site e plataforma para a empresa Globaltty.
+                        <br>
+                        <strong>Tecnologias:</strong> JavaScript, Python, Node, php, html, css, mysql, docker
+                    </p>
+                    <button onclick="window.open('https://Globaltty.com', '_blank');"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+
+
+
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/bingo.png" alt="Projeto 1" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Bingo com websocket</h3>
+                    <p class="text-lg text-gray-600 mb-4">Bingo em tempo real, utilizando nodeJs e websocket. <br>
+                        <strong>Tecnologias:</strong> Node, php, JavaScript, html, css
+                    </p>
+                    <button onclick="openModal('modal1')"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+
+                <!-- Projeto 3 -->
+
+
+
+
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="assets/images/loja.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Loja virtual</h3>
+                    <p class="text-lg text-gray-600 mb-4">Loja virtual para a empresa GrSoluções
+                        <br>
+                        PHP
+                    </p>
+                    <button onclick="window.open('https://grsolucao.com.br/', '_blank');"
+                        class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Ver
+                        Projeto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold text-teal-600 mb-4">Bingo online</h3>
+            <p class="text-lg text-gray-600 mb-4">
+                <video src="assets/videos/1687799730409.mp4" controls></video>
+
+            </p>
+            <button onclick="closeModal('modal1')"
+                class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Fechar</button>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <h3 class="text-2xl font-bold text-teal-600 mb-4">Sistemas Sal</h3>
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <img src="assets/images/3333.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Automação de simples nacional</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    O bot automatiza a obtenção do relatório de clientes no SSW, realiza consultas individuais e compara
+                    os dados com a base da Sal. Qualquer alteração no Simples Nacional é imediatamente atualizada no
+                    banco de dados da empresa, garantindo conformidade fiscal e evitando multas. Ao final do dia, o
+                    sistema gera e envia um relatório em formato .xls para o setor responsável, mantendo a equipe sempre
+                    informada.
+                    <br>
+                    <strong>Tecnologias:</strong> Python
+                </p>
+
+            </div>
+
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <img src="assets/images/devolução.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Sistema de devolução</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    O cliente solicita a devolução, e o sistema gera automaticamente a OS no SSW via web scraping,
+                    notificando a base e retornando o número do pedido.
+                    <br>
+                    <strong>Tecnologias:</strong> Python, JavaScript, PHP, HTML, CSS
+                </p>
+                <p class="text-lg text-gray-600 mb-4">
+                    Este sistema permite que o cliente solicite a devolução de forma simples e eficiente. Assim que a
+                    solicitação é feita, um web scraping em Python interage com o SSW, gerando automaticamente a Ordem
+                    de Serviço (OS). O número da OS é imediatamente retornado ao cliente e, ao mesmo tempo, todas as
+                    informações da devolução são enviadas diretamente para a base de dados, garantindo um fluxo ágil e
+                    preciso.
+                    Isso elimina processos manuais, reduz erros e melhora significativamente a experiência do usuário.
+                </p>
+                <button onclick="window.open('https://salexpress.com.br/dadossw/devolucao.html', '_blank');"
+                    class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">
+                    Veja o site
+                </button>
+            </div>
+
+
+
+
+
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 mt-6">
+                <img src="assets/images/5.png" alt="Projeto 3" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold text-teal-600 mt-6 mb-2">Cálculo de entrega</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    Sistema de cálculo de frete integrado ao SSW, garantindo maior precisão nas estimativas e otimização
+                    dos custos para o cliente.
+                    <br>
+                    <strong>Tecnologias:</strong> Python, JavaScript, HTML, CSS
+                </p>
+                <p class="text-lg text-gray-600 mb-4">
+                    Este sistema permite que o cliente solicite a devolução de forma simples e eficiente. Assim que a
+                    solicitação é feita, um web scraping em Python interage com o SSW, gerando automaticamente a Ordem
+                    de Serviço (OS). O número da OS é imediatamente retornado ao cliente e, ao mesmo tempo, todas as
+                    informações da devolução são enviadas diretamente para a base de dados, garantindo um fluxo ágil e
+                    preciso.
+                    Isso elimina processos manuais, reduz erros e melhora significativamente a experiência do usuário.
+                </p>
+                <button onclick="window.open('https://salexpress.com.br/cotar/', '_blank');"
+                    class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">
+                    Veja o site
+                </button>
+            </div>
+
+            <button onclick="closeModal('modal4')"
+                class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300 mt-6">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold text-teal-600 mb-4">Globaltty</h3>
+            <p class="text-lg text-gray-600 mb-4">Desenvolvimento do site e plataforma para a empresa Globaltty,
+                utilizando tecnologias modernas como Python (FastAPI), Node.js e React.
+                O novo sistema melhorou a experiência do usuário e a eficiência operacional. </p>
+            <button onclick="closeModal('modal2')"
+                class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold text-teal-600 mb-4">App de Etiquetas</h3>
+            <p class="text-lg text-gray-600 mb-4">
+                Este sistema, observa os email recebidos mais de 20 cleintes, cada e-mail que tem uma nota fiscal é lida
+                e salva na api que retona para o app, cada cleinte gera a etiqueta de acordo com as notas recebidas, no
+                fim geram um realtorio os istens lidos e gerados, impedindo extravios no cliente! <video
+                    style="height: 250px;"
+                    src="assets/videos/Vídeo do WhatsApp de 2025-03-04 à(s) 13.53.10_54cb1c2f.mp4" controls></video></p>
+            <button onclick="closeModal('modal3')"
+                class="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">Fechar</button>
+        </div>
+    </div>
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5527999227060" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M12 2a10 10 0 00-8.82 14.99l-1.18 4.27a1 1 0 001.27 1.27l4.27-1.18A10 10 0 1012 2zm0 18a8 8 0 114.9-14.39l.69.4a8 8 0 01-8.19 13.38l-.48-.09-.28-.15-2.72.76.76-2.72-.15-.28a8 8 0 0110.97-10.97l.4.69A8 8 0 0112 20zm-1.88-9.38c.12.12 2.11 2.11 2.22 2.22.29.29.77.35 1.08.1.31-.25.77-.61 1.03-.8.25-.19.52-.22.78-.1.26.12 1.64.8 1.91.92.26.12.44.18.5.28.07.1.07.57-.12 1.13-.18.55-.94 1.06-1.28 1.25-.35.19-1.52.61-2.79-.22-1.27-.83-2.88-2.43-3.4-3.15-.52-.72-1.08-1.73-1.2-2.32-.12-.59.06-1.06.31-1.31.25-.25.56-.31.75-.31s.38 0 .56.01c.18.01.41-.05.53.19.12.24.64 1.5.71 1.64.06.14.06.3-.06.42-.12.12-.37.44-.56.67-.18.24-.37.4-.18.64z"
+                clip-rule="evenodd" />
+        </svg>
+    </a>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gradient-to-r from-teal-600 to-teal-800 text-white text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold">Vamos Trabalhar Juntos!</h2>
+            <p class="text-xl text-teal-100 mb-8">Entre em contato para discutir seu próximo projeto.</p>
+            <a href="#" onclick="window.open('https://wa.me/5527999227060', '_blank');                "
+                class="inline-block bg-teal-500 text-white py-3 px-8 rounded-lg text-xl font-semibold mt-6 hover:bg-teal-600 transition duration-300">Enviar
+                Mensage</a>
+        </div>
+    </section>
+
+    <!-- JavaScript para o Modal -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Fechar o modal ao clicar fora dele
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuItems = document.querySelector('.menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            menuItems.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
